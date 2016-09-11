@@ -21,16 +21,21 @@ div.cbox input[type="checkbox"] {
   background-color: white;
 }
 .cbox label:before {
-border: 3px solid white;
-border-right: none;
-border-top: none;
-transform: rotate(-45deg);
-opacity: 0;
+  content: '';
+  border: 3px solid white;
+  border-right: none;
+  border-top: none;
+  transform: rotate(-45deg);
+  width: 9px;
+  height: 5px;
+  top: 8px;
+  left: 8px;
+  opacity: 0;
 }
-.cbox input[type="checkbox"]:checked + .cbox label:before {
+.cbox input[type="checkbox"]:checked + label:before {
   opacity: 1;
 }
-.cbox input[type="checkbox"]:checked + .cbox {
+.cbox input[type="checkbox"]:checked + label {
   background: green;
 }
 </style>
