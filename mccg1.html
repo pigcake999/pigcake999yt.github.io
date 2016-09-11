@@ -1,0 +1,40 @@
+<html>
+<head>
+<title></title>
+<style>
+div.cbox input[type="checkbox"] {
+  visibility: hidden;
+}
+.cbox {
+  background: white;
+  width: 30px;
+  height: 30px;
+}
+.cbox label {
+  top: 1px;
+  left: 1px;
+  width: 28px;
+  height: 28px;
+}
+.cbox label:before {
+border: 3px solid white;
+border-right: none;
+border-top: none;
+transform: rotate(-45deg);
+opacity: 0;
+}
+.cbox input[type="checkbox"]:checked + .cbox label:before {
+  opacity: 1;
+}
+.cbox input[type="checkbox"]:checked + .cbox {
+  background: green;
+}
+</style>
+</head>
+<body>
+<div>
+<div class="cbox"><label for="box1"></label><input id="box1" type="checkbox"></div>
+</div>
+<script>
+</script>
+</body>
