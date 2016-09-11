@@ -1,6 +1,22 @@
 <html>
 <head>
 <title>Minecraft Generators &bull; Armor Stand</title>
+<script>
+  window.onload = function(){
+    var command = "/summon ArmorStand ";
+    var x = getElementById('xpos').InnerHtml;
+    var y = getElementById('ypos').InnerHtml;
+    var z = getElementById('zpos').InnerHtml;
+    command += x;
+    command += " " + y + " ";
+    command += z + " {";
+    command += "}";
+    alert(command);
+  }
+  function create(){
+    
+  }
+</script>
 <style>
 body {
   margin: 0;
@@ -48,6 +64,9 @@ div.cbox input[type="checkbox"] {
 <body>
 <div>
 <div class="cbox"><input id="box1" type="checkbox"><label for="box1"></label></div> Invisible?
+<textarea id="xpos"></textarea>
+<textarea id="ypos"></textarea>
+<textarea id="zpos"></textarea>
 </div>
 <script>
 </script>
