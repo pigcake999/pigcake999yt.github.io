@@ -3,6 +3,7 @@
 <title>Minecraft Generators &bull; Armor Stand</title>
 <script>
   window.onload = function(){
+    var commandview = getElementById("view");
     var command = "/summon ArmorStand ";
     var x = getElementById('xpos').InnerHtml;
     var y = getElementById('ypos').InnerHtml;
@@ -11,7 +12,7 @@
     command += " " + y + " ";
     command += z + " {";
     command += "}";
-    alert(command);
+    commandview.InnerHtml = command;
   }
   function create(){
     
@@ -67,8 +68,7 @@ div.cbox input[type="checkbox"] {
 <textarea id="xpos"></textarea>
 <textarea id="ypos"></textarea>
 <textarea id="zpos"></textarea>
+<span id="view"></span>
 </div>
-<script>
-</script>
 </body>
 </html>
