@@ -8,9 +8,9 @@
     var x = getElementById('xpos').InnerHtml;
     var y = getElementById('ypos').InnerHtml;
     var z = getElementById('zpos').InnerHtml;
-    command += x;
-    command += " " + y + " ";
-    command += z + " {";
+    command = command+x;
+    command = command+" "+y+" ";
+    command += command+z+ " {";
     command += "}";
     commandview.InnerHtml = command;
   }
